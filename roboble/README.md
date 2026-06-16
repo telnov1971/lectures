@@ -80,7 +80,7 @@ int main() {
 
 #### [API Guides → Bluetooth Low Energy → Overview → Introduction](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-guides/ble/overview.html)
 
-
+<img width="672" height="281" alt="stream-ble-levels" src="https://github.com/user-attachments/assets/2c171ffd-f860-4291-8d10-5cfd0d3bfa24" />
 
 
 * Нам нужно **пробраться через все четыре уровня**. Где-то что-то включить, где-то что-то настроить. И после этого мы сможем писать собственно приложение.
@@ -114,7 +114,9 @@ classDef blue fill:#00696c,stroke:#00696c,color:#d4c493;
 > И правда, ещё как пригодится.
 
 → Component Config → Bluetooth [on] → Host
-![](stream-esp32-config.png)
+
+
+
 
 - [x] `вопрос`Нужно как-то инициировать контроллер в коде? ✅ 2025-11-21
 
