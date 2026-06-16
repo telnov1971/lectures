@@ -1,9 +1,11 @@
 
 Youtube-запись от `2025-11-21`: https://youtu.be/spd1dQpZXus
 
+<img width="1000" height="780" alt="stream-robodog" src="https://github.com/user-attachments/assets/97d8d6e0-cef5-48a4-a078-b518c1e45497" />
 
 # Внезапно Linux не смог
-> [!WARNING] Шок-контент
+> [!WARNING]
+> Шок-контент.
 > Да, Linux правда не позволяет **честно** писать клиентские приложения для прямого управления BLE-устройствами через отправку команд
 
 ```c
@@ -43,6 +45,7 @@ int main() {
 
 ~~Ну и ещё за то, что долго ждал в коробке.~~
 
+<img width="485" height="349" alt="lilygo-t-dongle-s3" src="https://github.com/user-attachments/assets/175c9a35-12ff-4867-a666-d529d1fa4f39" />
 
 
 ## Подключаем плату и настраиваем проект
@@ -51,7 +54,8 @@ int main() {
 
 #### `. $HOME/esp/esp-idf/export.sh` — инициализировать среду
 
-> [!NOTE] И так в каждом терминале
+> [!NOTE]
+> И так в каждом терминале.
 > В частности, в каждом окне и в каждой панели `tmux`
 
 #### `idf create-project` — инициировать проект
@@ -60,7 +64,8 @@ int main() {
 #### `idf set-target esp32s3` — указать микроконтроллер
 
 ## Медленно ползём по [ESP-EDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/index.html)
-> [!NOTE] [ESP-EDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/index.html) всё время меняется
+> [!NOTE]
+> [ESP-EDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/index.html) всё время меняется.
 > Поэтому внешние источники всё время врут. Даже «умные».
 
 ### Выясняем, где тут вообще информация про :FabBluetooth:Bluetooth и BLE
@@ -69,11 +74,15 @@ int main() {
 - [API Guides → Bluetooth Low Energy](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-guides/ble/index.html) — а вот тут есть шанс понять общую картинку
 
 ### Начинаем конспектировать добытые знания
-> [!TIP] Можно и на бумаге
+> [!TIP]
+> Можно и на бумаге.
 > А вот что нельзя, так это копипастить. Захлебнётесь.
 
 #### [API Guides → Bluetooth Low Energy → Overview → Introduction](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-guides/ble/overview.html)
-![](stream-ble-levels.png)
+
+
+
+
 * Нам нужно **пробраться через все четыре уровня**. Где-то что-то включить, где-то что-то настроить. И после этого мы сможем писать собственно приложение.
 <br/>
 * На каждом уровне — **свои** инструменты, своя архитектура, свои команды в инструментах, свои настройки железа и софта. И **выбирать это надо под сценарий**, который требуется в приложении.
@@ -100,8 +109,9 @@ classDef blue fill:#00696c,stroke:#00696c,color:#d4c493;
 
 
 ##### 🔴 Контроллер
-> [!TIP] Раз это железо, то, наверное, пригодится `idf menuconfig`?
-> И правда, ещё как пригодится
+> [!TIP]
+> Раз это железо, то, наверное, пригодится `idf menuconfig`?
+> И правда, ещё как пригодится.
 
 → Component Config → Bluetooth [on] → Host
 ![](stream-esp32-config.png)
@@ -131,7 +141,8 @@ flash ==> port ==> params ==> specific ==> thread
 ```
 
 ###### [nvs_flash_init()](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-reference/storage/nvs_flash.html#_CPPv414nvs_flash_initv) — первым делом инициируем NVS
-> [!TIP] NVS — Non-Volatile Storage
+> [!TIP]
+> NVS — Non-Volatile Storage.
 > Энергонезависимая память. Выживает между перезагрузками. Нужна для ключей.
 
 `esp_err_t nvs_flash_init(void)`
@@ -147,7 +158,8 @@ flash ==> port ==> params ==> specific ==> thread
 ###### nimble_port_init() — теперь, говорят, нужен какой-то порт
 - [ ] А эта функция вообще где? Не в ESP-IDF, похоже?
 
-> [!TIP] Нам пригодится `grep` в каталоге, где установлен ESP
+> [!TIP]
+> Нам пригодится `grep` в каталоге, где установлен ESP
 
 - [ ] Нам надо знать, что такое порт? ✅ 2025-11-21
 
