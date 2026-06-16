@@ -115,7 +115,7 @@ classDef blue fill:#00696c,stroke:#00696c,color:#d4c493;
 
 → Component Config → Bluetooth [on] → Host
 
-
+<img width="2184" height="1262" alt="stream-esp32-config" src="https://github.com/user-attachments/assets/6b2008b5-e956-430d-906e-e0667ddebe77" />
 
 
 - [x] `вопрос`Нужно как-то инициировать контроллер в коде? ✅ 2025-11-21
@@ -166,12 +166,15 @@ flash ==> port ==> params ==> specific ==> thread
 - [ ] Нам надо знать, что такое порт? ✅ 2025-11-21
 
 Логи как бы намекают:
-![](stream-ble-logs.png)
+
+<img width="933" height="211" alt="stream-ble-logs" src="https://github.com/user-attachments/assets/f8688d69-3676-4c6d-88e7-891cfa57f2c5" />
+
 
 #### … а дальше как быть со схемой?
 Больше из [API Guides → Bluetooth Low Energy → Overview → Introduction](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-guides/ble/overview.html) не выжать. А со схемой мы ещё не разобрались.
 
-> [!WARNING] Идём дальше, чтобы ответить на оставшиеся вопросы
+> [!WARNING]
+> Идём дальше, чтобы ответить на оставшиеся вопросы.
 > Дальше — это по документации. Очень медленно.
 
 → [API Guides → Bluetooth Low Energy → Get Started](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-guides/ble/index.html#get-started)
