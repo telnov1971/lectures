@@ -2,7 +2,7 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-# Рассказы про низко- и разноуровневое программирование
+# Низкоуровневый код и железо
 * [Прямые эфиры на Twitch](https://www.twitch.tv/olgampavlova) каждую пятницу в 🕖 19:00 GMT+3.
 * Архив видеозаписей на [Youtube-канале](https://www.youtube.com/@olgapavlova).
 
